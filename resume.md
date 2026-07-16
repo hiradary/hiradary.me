@@ -1,0 +1,75 @@
+# Hirad Arshadi Yarahmadi
+
+**Full-Stack Software Engineer**
+
+Vancouver, BC | [hey@hiradary.me](mailto:hey@hiradary.me) | +1 778-968-4240 | [GitHub](https://github.com/hiradary) | [LinkedIn](https://www.linkedin.com/in/hiradarshadi/) | [X](https://x.com/hiradary) | [CodePen](https://codepen.io/hiradary)
+
+## Summary
+
+Full-Stack Software Engineer with 8+ years of experience building product-focused web and mobile applications, developer platforms, and backend/API infrastructure with TypeScript, React, and Node.js. Strong across generated-app systems, DSL/runtime development, polished product UI, authentication, billing, testing, and developer tooling.
+
+## Professional Experience
+
+### [Sutro Software](https://withsutro.com/), Software Engineer
+
+**08/2022 - Present | US (Remote)**
+
+Sutro is a zero-infrastructure backend platform for generating, editing, publishing, and operating production-ready applications from prompts, APIs, and structured app definitions.
+
+- Built core SLang app-definition language and runtime systems for defining production-ready backends with data models, logic, APIs, and security rules, including import handling, static type checking, control flow, event triggers, AST validation, and reliability fixes.
+- Developed generated-app infrastructure for creating, documenting, versioning, and publishing [X]+ production-ready backends, including OpenAPI generation, multi-environment API specs, E2E publish tests, and deployment fixes.
+- Shipped major Sutro Studio product surfaces across builder chat, data views, authentication UI, app generation flows, preview/publish workflows, analytics, and debugging tools for generated app code.
+- Contributed to Sutro's generated-app component system and AI-addressable UI vocabulary, including forms, data-display components, media components, Storybook coverage, Tailwind runtime styling, and design-system refresh work.
+- Improved Console, onboarding, authentication, security, billing, and developer-platform infrastructure, including login/registration, member invites, Stripe-backed PAYG billing, `@sutro/cli`, test infrastructure, and repo-wide tooling.
+
+### [Genie.xyz](https://www.linkedin.com/company/genielabs), UI Engineer
+
+**04/2022 - 06/2022 | US (Remote)**
+
+Genie was an NFT marketplace aggregation product later acquired by Uniswap.
+
+- Rebuilt the NFT sweeping flow with clearer options, stronger interaction states, and a smoother path from collection selection to transaction review.
+- Fixed UI issues and added polished animations across high-visibility product surfaces to improve clarity, responsiveness, and overall product quality.
+
+### [Digikala](https://digikala.com/), Front-End Developer (Contract)
+
+**02/2022 - 03/2022**
+
+- Designed and built an internal dashboard from scratch for [X] senior stakeholders at Digikala, one of the largest e-commerce websites in the Middle East.
+
+### [Piqo Design](https://piqo.design/), Co-Founder
+
+**12/2020 - 08/2021**
+
+- Created a new revenue model that increased revenue by 300%.
+- Built landing pages for client product teams, balancing conversion goals, implementation speed, and visual polish.
+- Managed client projects from kickoff to delivery, including designer onboarding, client communication, scoping, and cost discussions.
+
+### [RibalTech](https://ribaltech.ir/), Front-End Web/Mobile Developer
+
+**01/2018 - 06/2020**
+
+Built client-facing web and mobile products, including front-end lead work for Riiha.ir, one of Iran's largest perfume and beauty marketplaces.
+
+- Led front-end delivery for Riiha, coordinating with back-end engineers and product stakeholders across web and mobile releases.
+- Modernized front-end tooling and practices, and increased test coverage for key components to 95%.
+- Built and maintained B2C web and mobile applications using React and React Native.
+- Helped grow one of Iran's largest React communities in Telegram.
+
+## Education
+
+### [Douglas College](https://www.douglascollege.ca/program/dpcsti)
+
+Diploma, Computing Studies and Information Systems | 05/2022 - 04/2024 | New Westminster, BC
+
+## Projects
+
+- [Reoverlay](https://github.com/hiradary/reoverlay), an open-source React modal management library for coordinating modal state outside component hierarchies with a small API and production-friendly ergonomics.
+
+## Skills
+
+- **Core:** TypeScript, JavaScript, React, Node.js, HTML, CSS, React Native
+- **Product Engineering:** UI/UX engineering, design systems, Storybook, Tailwind CSS, state management, performance optimization
+- **Platform & Backend:** REST API design, OpenAPI/Swagger, generated-app infrastructure, DSL/runtime development, static type checking, authentication, security, billing systems
+- **Data & Tools:** PostgreSQL, MongoDB, Mongoose, Stripe, Express, Zod, SWR, Redux, MobX, Zustand, Expo, GSAP
+- **Quality & AI Workflows:** Vitest, E2E testing, developer tooling, Git/GitHub, Codex, Claude Code, MCP, LLM-powered product development, AI-assisted code review and debugging

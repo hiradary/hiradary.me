@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Reoverlay modal manager</title>
+  <desc id="desc">A code editor opening a confirmation modal through the Reoverlay API.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#17151e"/>
+      <stop offset="1" stop-color="#0d0c10"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#b4a7ff"/>
+      <stop offset="1" stop-color="#6f5ee5"/>
+    </linearGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="28" stdDeviation="40" flood-color="#000" flood-opacity=".48"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1320" cy="80" r="360" fill="#7c69ef" opacity=".08"/>
+  <circle cx="180" cy="840" r="420" fill="#a293ff" opacity=".05"/>
+  <g opacity=".7">
+    <path d="M0 180h1600M0 360h1600M0 540h1600M0 720h1600" stroke="#fff" stroke-opacity=".035"/>
+    <path d="M200 0v900M400 0v900M600 0v900M800 0v900M1000 0v900M1200 0v900M1400 0v900" stroke="#fff" stroke-opacity=".025"/>
+  </g>
+  <g transform="translate(145 150)" filter="url(#shadow)">
+    <rect width="1310" height="600" rx="28" fill="#121116" stroke="#38343f"/>
+    <rect width="1310" height="62" rx="28" fill="#1a181f"/>
+    <rect y="34" width="1310" height="28" fill="#1a181f"/>
+    <circle cx="34" cy="31" r="7" fill="#ff6b6b"/>
+    <circle cx="58" cy="31" r="7" fill="#ffd166"/>
+    <circle cx="82" cy="31" r="7" fill="#56d68b"/>
+    <text x="120" y="39" fill="#85818c" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17">ConfirmAction.tsx</text>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23">
+      <text x="60" y="132" fill="#7c7785">1</text>
+      <text x="105" y="132" fill="#d6d2dc">import</text>
+      <text x="195" y="132" fill="#8f82e9">{ Reoverlay }</text>
+      <text x="365" y="132" fill="#d6d2dc">from</text>
+      <text x="430" y="132" fill="#b9df9f">'reoverlay'</text>
+      <text x="60" y="182" fill="#7c7785">2</text>
+      <text x="60" y="232" fill="#7c7785">3</text>
+      <text x="105" y="232" fill="#8f82e9">Reoverlay</text>
+      <text x="218" y="232" fill="#d6d2dc">.showModal(</text>
+      <text x="390" y="232" fill="#e2a8d7">ConfirmModal</text>
+      <text x="548" y="232" fill="#d6d2dc">, {</text>
+      <text x="60" y="282" fill="#7c7785">4</text>
+      <text x="135" y="282" fill="#92c9e8">message</text>
+      <text x="233" y="282" fill="#d6d2dc">:</text>
+      <text x="255" y="282" fill="#b9df9f">'Archive this item?'</text>
+      <text x="60" y="332" fill="#7c7785">5</text>
+      <text x="135" y="332" fill="#92c9e8">onConfirm</text>
+      <text x="265" y="332" fill="#d6d2dc">: () =&gt;</text>
+      <text x="360" y="332" fill="#8f82e9">Reoverlay</text>
+      <text x="473" y="332" fill="#d6d2dc">.hideModal(),</text>
+      <text x="60" y="382" fill="#7c7785">6</text>
+      <text x="105" y="382" fill="#d6d2dc">})</text>
+    </g>
+    <rect x="810" y="125" width="410" height="350" rx="24" fill="#201e26" stroke="#4b4655"/>
+    <circle cx="1015" cy="205" r="38" fill="url(#accent)"/>
+    <path d="M1002 205l9 9 19-20" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1015" y="278" text-anchor="middle" fill="#f1eef5" font-family="Arial, sans-serif" font-size="28" font-weight="700">Archive this item?</text>
+    <text x="1015" y="316" text-anchor="middle" fill="#9b96a3" font-family="Arial, sans-serif" font-size="18">You can restore it later.</text>
+    <rect x="873" y="360" width="128" height="54" rx="12" fill="#2c2932" stroke="#4b4655"/>
+    <text x="937" y="394" text-anchor="middle" fill="#d3ced9" font-family="Arial, sans-serif" font-size="18" font-weight="600">Cancel</text>
+    <rect x="1022" y="360" width="136" height="54" rx="12" fill="url(#accent)"/>
+    <text x="1090" y="394" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="18" font-weight="700">Archive</text>
+    <rect x="60" y="510" width="164" height="44" rx="22" fill="#211d31" stroke="#554b85"/>
+    <text x="142" y="538" text-anchor="middle" fill="#b8acff" font-family="Arial, sans-serif" font-size="16" font-weight="700">TYPE SAFE</text>
+  </g>
+</svg>
