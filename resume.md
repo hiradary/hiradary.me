@@ -2,7 +2,7 @@
 
 **Full-Stack Software Engineer**
 
-Vancouver, BC | [hey@hiradary.me](mailto:hey@hiradary.me) | +1 778-968-4240 | [GitHub](https://github.com/hiradary) | [LinkedIn](https://www.linkedin.com/in/hiradarshadi/) | [X](https://x.com/hiradary) | [CodePen](https://codepen.io/hiradary)
+Vancouver, BC | [hiradwork@gmail.com](mailto:hiradwork@gmail.com) | +1 778-968-4240 | [GitHub](https://github.com/hiradary) | [LinkedIn](https://www.linkedin.com/in/hiradarshadi/) | [X](https://x.com/hiradary) | [CodePen](https://codepen.io/hiradary)
 
 ## Summary
 

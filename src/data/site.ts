@@ -7,7 +7,7 @@ export const siteConfig = {
   description:
     'Full-stack software engineer building product-focused web and mobile applications, developer platforms, and backend infrastructure.',
   url: 'https://hiradary.me',
-  email: 'hey@hiradary.me',
+  email: 'hiradwork@gmail.com',
   avatar: '/profile/hirad.jpg',
   location: 'Vancouver, BC',
   resumeUrl: null as string | null,
@@ -19,6 +19,6 @@ export const siteConfig = {
     },
     { label: 'X', href: 'https://x.com/hiradary' },
     { label: 'CodePen', href: 'https://codepen.io/hiradary' },
-    { label: 'Email', href: 'mailto:hey@hiradary.me' },
+    { label: 'Email', href: 'mailto:hiradwork@gmail.com' },
   ] satisfies SocialLink[],
 };
