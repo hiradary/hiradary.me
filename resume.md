@@ -16,15 +16,15 @@ Full-Stack Software Engineer with 8+ years of experience building product-focuse
 
 Sutro is a zero-infrastructure backend platform for generating, editing, publishing, and operating production-ready applications from prompts, APIs, and structured app definitions.
 
-- Built core SLang app-definition language and runtime systems for defining production-ready backends with data models, logic, APIs, and security rules, including import handling, static type checking, control flow, event triggers, AST validation, and reliability fixes.
-- Developed generated-app infrastructure for creating, documenting, versioning, and publishing [X]+ production-ready backends, including OpenAPI generation, multi-environment API specs, E2E publish tests, and deployment fixes.
-- Shipped major Sutro Studio product surfaces across builder chat, data views, authentication UI, app generation flows, preview/publish workflows, analytics, and debugging tools for generated app code.
-- Contributed to Sutro's generated-app component system and AI-addressable UI vocabulary, including forms, data-display components, media components, Storybook coverage, Tailwind runtime styling, and design-system refresh work.
-- Improved Console, onboarding, authentication, security, billing, and developer-platform infrastructure, including login/registration, member invites, Stripe-backed PAYG billing, `@sutro/cli`, test infrastructure, and repo-wide tooling.
+- Built core parts of SLang, Sutro's app-definition language and runtime, including import handling, static type checking, control flow, event triggers, file handling, template strings, AST validation, and runtime reliability fixes.
+- Contributed to Sutro's generated-app infrastructure, including OpenAPI generation, REST endpoint documentation, versioned app snapshots, publish workflow tests, and deployment/runtime fixes.
+- Built major parts of Sutro Studio, including the app shell, builder chat, data views, authentication UI, app generation flows, preview/publish workflows, analytics, and tools for debugging and editing generated app code.
+- Developed pieces of Sutro's generated-app component system and AI-addressable UI vocabulary, including tables, charts, tabs, forms, media and avatar components, typography, Storybook coverage, and Tailwind runtime styling.
+- Improved platform foundations across Console, onboarding, authentication, security, billing, and developer tooling, including login/registration, member invites, API security headers, Stripe-backed PAYG billing, `@sutro/cli`, and test/tooling infrastructure.
 
 ### [Genie.xyz](https://www.linkedin.com/company/genielabs), UI Engineer
 
-**04/2022 - 06/2022 | US (Remote)**
+**04/2022 - 06/2022 | New York, US (Remote)**
 
 Genie was an NFT marketplace aggregation product later acquired by Uniswap.
 
@@ -37,22 +37,26 @@ Genie was an NFT marketplace aggregation product later acquired by Uniswap.
 
 - Designed and built an internal dashboard from scratch for [X] senior stakeholders at Digikala, one of the largest e-commerce websites in the Middle East.
 
-### [Piqo Design](https://piqo.design/), Co-Founder
+### [Piqo Studio](https://piqo.design/), Co-Founder
 
-**12/2020 - 08/2021**
+**12/2020 - 12/2021 | Remote**
 
 - Created a new revenue model that increased revenue by 300%.
 - Built landing pages for client product teams, balancing conversion goals, implementation speed, and visual polish.
 - Managed client projects from kickoff to delivery, including designer onboarding, client communication, scoping, and cost discussions.
 
+### [riiha](https://www.linkedin.com/company/26500795/), Front-End Lead
+
+**07/2019 - 06/2020 | Tehran, Iran (Remote)**
+
+- Coordinated collaboration between front-end, back-end, and product teams to keep projects moving smoothly.
+- Introduced modern tools and development practices to improve engineering efficiency and product quality.
+- Increased test coverage for key components to 95%, improving reliability and maintainability.
+
 ### [RibalTech](https://ribaltech.ir/), Front-End Web/Mobile Developer
 
-**01/2018 - 06/2020**
+**01/2018 - 07/2019 | Sari, Iran**
 
-Built client-facing web and mobile products, including front-end lead work for Riiha.ir, one of Iran's largest perfume and beauty marketplaces.
-
-- Led front-end delivery for Riiha, coordinating with back-end engineers and product stakeholders across web and mobile releases.
-- Modernized front-end tooling and practices, and increased test coverage for key components to 95%.
 - Built and maintained B2C web and mobile applications using React and React Native.
 - Helped grow one of Iran's largest React communities in Telegram.
 
@@ -61,6 +65,10 @@ Built client-facing web and mobile products, including front-end lead work for R
 ### [Douglas College](https://www.douglascollege.ca/program/dpcsti)
 
 Diploma, Computing Studies and Information Systems | 05/2022 - 04/2024 | New Westminster, BC
+
+### Kharazmi Vocational High School
+
+High School Diploma, Database Programming | 10/2019 - 06/2021
 
 ## Projects
 

@@ -66,10 +66,11 @@ export const experiences: Experience[] = [
       'Vitest',
     ),
     description: [
-      'Built core language and runtime systems for defining production-ready backends, including imports, static type checking, control flow, event triggers, and AST validation.',
-      'Developed generated-app infrastructure for creating, documenting, versioning, testing, and publishing production-ready backends.',
-      'Shipped major product surfaces across builder chat, data views, authentication, app generation, previews, publishing, analytics, and debugging.',
-      'Improved onboarding, security, billing, CLI tooling, test infrastructure, and repository-wide developer workflows.',
+      'Built core parts of SLang, Sutro’s app-definition language and runtime, including imports, static type checking, control flow, event triggers, file handling, template strings, AST validation, and reliability fixes.',
+      'Contributed to generated-app infrastructure across OpenAPI generation, REST endpoint documentation, versioned app snapshots, publish workflow tests, and deployment/runtime fixes.',
+      'Built major parts of Sutro Studio across the app shell, builder chat, data views, authentication, app generation, preview/publish workflows, analytics, and generated-code debugging tools.',
+      'Developed pieces of the generated-app component system and AI-addressable UI vocabulary, including tables, charts, tabs, forms, media, typography, Storybook coverage, and Tailwind runtime styling.',
+      'Improved Console, onboarding, authentication, security, billing, and developer tooling, including member invites, API security headers, Stripe-backed PAYG billing, the Sutro CLI, and test infrastructure.',
     ],
   },
   {
@@ -79,7 +80,10 @@ export const experiences: Experience[] = [
       full: 'April 2022 — June 2022',
       compact: 'Apr 22 — Jun 22',
     },
-    location: { full: 'United States (Remote)', compact: 'US · Remote' },
+    location: {
+      full: 'New York, New York, United States (Remote)',
+      compact: 'NY · Remote',
+    },
     website: 'https://www.linkedin.com/company/genielabs',
     technologies: technologies('TypeScript', 'React', 'JavaScript'),
     description: [
@@ -102,11 +106,11 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    company: 'Piqo Design',
+    company: 'Piqo Studio',
     role: 'Co-Founder',
     dateRange: {
-      full: 'December 2020 — August 2021',
-      compact: 'Dec 20 — Aug 21',
+      full: 'December 2020 — December 2021',
+      compact: 'Dec 20 — Dec 21',
     },
     location: { full: 'Remote', compact: 'Remote' },
     website: 'https://piqo.design/',
@@ -118,13 +122,32 @@ export const experiences: Experience[] = [
     ],
   },
   {
+    company: 'riiha',
+    role: 'Front-End Lead',
+    dateRange: {
+      full: 'July 2019 — June 2020',
+      compact: 'Jul 19 — Jun 20',
+    },
+    location: {
+      full: 'Tehran, Iran (Remote)',
+      compact: 'Tehran · Remote',
+    },
+    website: 'https://www.linkedin.com/company/26500795/',
+    technologies: technologies('JavaScript', 'React'),
+    description: [
+      'Coordinated collaboration between front-end, back-end, and product teams to keep projects moving smoothly.',
+      'Introduced modern tools and development practices to improve engineering efficiency and product quality.',
+      'Increased test coverage for key components to 95%, improving reliability and maintainability.',
+    ],
+  },
+  {
     company: 'RibalTech',
     role: 'Front-End Web/Mobile Developer',
     dateRange: {
-      full: 'January 2018 — June 2020',
-      compact: 'Jan 18 — Jun 20',
+      full: 'January 2018 — July 2019',
+      compact: 'Jan 18 — Jul 19',
     },
-    location: { full: 'Iran', compact: 'Iran' },
+    location: { full: 'Sari, Iran', compact: 'Sari · Iran' },
     website: 'https://ribaltech.ir/',
     technologies: technologies(
       'JavaScript',
@@ -133,9 +156,8 @@ export const experiences: Experience[] = [
       'MongoDB',
     ),
     description: [
-      'Led front-end delivery for Riiha, coordinating with backend engineers and product stakeholders across web and mobile releases.',
-      'Modernized front-end tooling and practices while raising test coverage for key components to 95%.',
-      'Built and maintained B2C web and mobile applications and helped grow one of Iran’s largest React communities.',
+      'Built and maintained multiple B2C web and mobile applications using React and React Native.',
+      'Helped grow one of Iran’s largest React communities on Telegram.',
     ],
   },
 ];
