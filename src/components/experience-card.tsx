@@ -1,4 +1,5 @@
 import { ArrowUpRight } from 'lucide-react';
+import Image from 'next/image';
 
 import type { Experience } from '@/types/content';
 
@@ -9,9 +10,19 @@ export function ExperienceCard({ experience }: { experience: Experience }) {
     <article className="experience-card">
       <div className="experience-header">
         <div className="experience-identity">
-          <span className="company-mark" aria-hidden="true">
-            {experience.initials}
-          </span>
+          {experience.logo.kind === 'image' ? (
+            <Image
+              className="company-logo"
+              src={experience.logo.src}
+              alt={`${experience.company} logo`}
+              width={48}
+              height={48}
+            />
+          ) : (
+            <span className="company-mark" aria-hidden="true">
+              {experience.logo.text}
+            </span>
+          )}
           <div>
             <div className="experience-company-line">
               <h3>{experience.company}</h3>
@@ -42,10 +53,13 @@ export function ExperienceCard({ experience }: { experience: Experience }) {
           <p>{experience.location}</p>
         </div>
       </div>
-      <div className="experience-technologies">
-        {experience.technologies.map((technology) => (
-          <TechnologyChip key={technology.name} technology={technology} />
-        ))}
+      <div className="experience-stack">
+        <h4>Technologies</h4>
+        <div className="experience-technologies">
+          {experience.technologies.map((technology) => (
+            <TechnologyChip key={technology.name} technology={technology} />
+          ))}
+        </div>
       </div>
       <ul className="experience-points">
         {experience.description.map((point) => (

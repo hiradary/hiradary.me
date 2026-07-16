@@ -3,9 +3,48 @@ export type SocialLink = {
   href: string;
 };
 
+export type TechnologyIconKey =
+  | 'typescript'
+  | 'javascript'
+  | 'react'
+  | 'react-native'
+  | 'node'
+  | 'postgresql'
+  | 'mongodb'
+  | 'openapi'
+  | 'storybook'
+  | 'tailwind'
+  | 'stripe'
+  | 'vitest'
+  | 'gsap'
+  | 'tsup'
+  | 'product-design'
+  | 'web-app'
+  | 'ai'
+  | 'canvas'
+  | 'developer-tooling';
+
 export type Technology = {
   name: string;
   href: string;
+  icon: TechnologyIconKey;
+};
+
+export type DisplayTechnology = {
+  name: string;
+  icon: TechnologyIconKey;
+};
+
+export type HeroDescriptionSegment =
+  | { type: 'text'; text: string }
+  | { type: 'technology'; technology: Technology };
+
+export type CompanyLogo =
+  { kind: 'image'; src: string } | { kind: 'initials'; text: string };
+
+export type ProjectTechnology = {
+  name: string;
+  icon: TechnologyIconKey;
 };
 
 export type Experience = {
@@ -15,7 +54,7 @@ export type Experience = {
   startDate: string;
   endDate: string;
   current?: boolean;
-  initials: string;
+  logo: CompanyLogo;
   website?: string;
   description: string[];
   technologies: Technology[];
@@ -33,9 +72,10 @@ export type Project = {
   description: string;
   image: string;
   imageAlt: string;
-  technologies: string[];
+  technologies: ProjectTechnology[];
   links: ProjectLink[];
   status: string;
+  isWorking: boolean;
   caseStudySlug?: string;
 };
 

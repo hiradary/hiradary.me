@@ -16,13 +16,13 @@ export default function WorkExperiencePage() {
     <main id="main-content">
       <Container className="page-shell">
         <header className="page-header">
-          <p className="eyebrow">2018 — Present</p>
-          <h1>Work experience</h1>
-          <p>
-            Eight years of building product interfaces, developer platforms,
-            generated-app systems, and web and mobile applications.
-          </p>
+          <h1>Work Experience</h1>
+          <p>My work experiences across different companies and roles.</p>
         </header>
+        <hr className="page-separator" />
+        <h2 className="list-heading">
+          All Experiences <span>({experiences.length} experiences)</span>
+        </h2>
         <div className="experience-list experience-list-full">
           {experiences.map((experience) => (
             <ExperienceCard key={experience.company} experience={experience} />

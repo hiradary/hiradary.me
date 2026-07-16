@@ -1,6 +1,6 @@
-import { Code2 } from 'lucide-react';
-
 import type { Technology } from '@/types/content';
+
+import { TechnologyIcon } from './technology-icon';
 
 export function TechnologyChip({ technology }: { technology: Technology }) {
   return (
@@ -10,7 +10,7 @@ export function TechnologyChip({ technology }: { technology: Technology }) {
       target="_blank"
       rel="noreferrer noopener"
     >
-      <Code2 size={15} aria-hidden="true" />
+      <TechnologyIcon className="technology-chip-icon" icon={technology.icon} />
       {technology.name}
     </a>
   );

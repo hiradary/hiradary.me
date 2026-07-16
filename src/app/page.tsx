@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
 
 import { About } from '@/components/about';
 import { BlogPreview } from '@/components/blog-preview';
@@ -17,31 +17,38 @@ export default function HomePage() {
 
   return (
     <main id="main-content">
-      <Container>
+      <Container className="home-shell">
         <Hero />
 
         <section className="section" aria-labelledby="experience-heading">
           <SectionHeading eyebrow="Featured">Experience</SectionHeading>
           <div className="experience-list" id="experience-heading">
             {experiences.slice(0, 2).map((experience) => (
-              <ExperienceCard key={experience.company} experience={experience} />
+              <ExperienceCard
+                key={experience.company}
+                experience={experience}
+              />
             ))}
           </div>
-          <Link className="text-link section-link" href="/work-experience">
-            Show all work experience <span aria-hidden="true">→</span>
-          </Link>
+          <div className="section-link-wrap">
+            <Link className="button button-secondary" href="/work-experience">
+              Show all work experiences
+            </Link>
+          </div>
         </section>
 
         <section className="section" aria-labelledby="projects-heading">
-          <SectionHeading eyebrow="Selected">Projects</SectionHeading>
+          <SectionHeading eyebrow="Featured">Projects</SectionHeading>
           <div className="project-grid" id="projects-heading">
-            {projects.map((project) => (
+            {projects.slice(0, 4).map((project) => (
               <ProjectCard key={project.slug} project={project} />
             ))}
           </div>
-          <Link className="text-link section-link" href="/projects">
-            View all projects <span aria-hidden="true">→</span>
-          </Link>
+          <div className="section-link-wrap">
+            <Link className="button button-secondary" href="/projects">
+              Show all projects
+            </Link>
+          </div>
         </section>
 
         <About />

@@ -1,7 +1,7 @@
 import { ArrowLeft, ArrowUpRight, Github } from 'lucide-react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
 import { notFound } from 'next/navigation';
 
 import { Container } from '@/components/container';
@@ -47,6 +47,17 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <Link className="back-link" href="/projects">
           <ArrowLeft size={16} aria-hidden="true" /> Back to projects
         </Link>
+
+        <div className="case-study-visual">
+          <Image
+            src={project.image}
+            alt={project.imageAlt}
+            width={1600}
+            height={900}
+            priority
+          />
+        </div>
+
         <header className="case-study-header">
           <p className="eyebrow">Open source · React infrastructure</p>
           <h1>Reoverlay</h1>
@@ -71,16 +82,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
         </header>
 
-        <div className="case-study-visual">
-          <Image
-            src={project.image}
-            alt={project.imageAlt}
-            width={1600}
-            height={900}
-            priority
-          />
-        </div>
-
         <div className="case-study-body">
           <aside className="case-study-facts">
             <div>
@@ -103,8 +104,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               <p>
                 Authentication prompts, destructive confirmations, and global
                 interceptors often need to open outside the component hierarchy
-                that owns their UI. Reoverlay provides one top-level container and
-                a deliberately small API for coordinating those moments.
+                that owns their UI. Reoverlay provides one top-level container
+                and a deliberately small API for coordinating those moments.
               </p>
             </section>
             <section>
@@ -112,9 +113,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               <h2>A focused API with escape hatches.</h2>
               <p>
                 Consumers can open a modal by component, element, or configured
-                name; stack multiple modals; close a specific modal or the active
-                one; and bring their own visual shell when the default wrapper is
-                not appropriate.
+                name; stack multiple modals; close a specific modal or the
+                active one; and bring their own visual shell when the default
+                wrapper is not appropriate.
               </p>
               <pre aria-label="Reoverlay example">
                 <code>{`Reoverlay.showModal(ConfirmModal, {
@@ -128,9 +129,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               <h2>Typed, accessible, and small by design.</h2>
               <p>
                 The package includes typed props, optional named modal
-                configuration, stack-aware close behavior, Escape and outside-click
-                handling, accessible dialog attributes, and a default animated
-                wrapper that can be replaced entirely.
+                configuration, stack-aware close behavior, Escape and
+                outside-click handling, accessible dialog attributes, and a
+                default animated wrapper that can be replaced entirely.
               </p>
             </section>
           </article>

@@ -1,7 +1,7 @@
 import { ArrowUpRight, Mail } from 'lucide-react';
 import Image from 'next/image';
 
-import { featuredTechnologies, siteConfig } from '@/data/site';
+import { heroDescription, siteConfig } from '@/data/site';
 
 import { SocialLinks } from './social-links';
 import { TechnologyChip } from './technology-chip';
@@ -19,19 +19,19 @@ export function Hero() {
       />
       <div className="hero-copy">
         <h1 id="hero-heading">
-          Hi, I&apos;m {siteConfig.shortName}{' '}
-          <span>— {siteConfig.title}.</span>
+          Hi, I&apos;m {siteConfig.shortName} <span>— {siteConfig.title}.</span>
         </h1>
-        <div className="hero-description">
-          <p>
-            I build product-focused web and mobile applications with a focus on
-            polished interfaces, capable platforms, and reliable infrastructure.
-          </p>
-          <div className="hero-technologies" aria-label="Core technologies">
-            {featuredTechnologies.map((technology) => (
-              <TechnologyChip key={technology.name} technology={technology} />
-            ))}
-          </div>
+        <div className="hero-description" aria-label="Professional summary">
+          {heroDescription.map((segment, index) =>
+            segment.type === 'technology' ? (
+              <TechnologyChip
+                key={`${segment.technology.name}-${index}`}
+                technology={segment.technology}
+              />
+            ) : (
+              <span key={`${segment.text}-${index}`}>{segment.text}</span>
+            ),
+          )}
         </div>
       </div>
       <div className="hero-actions">
@@ -41,8 +41,11 @@ export function Hero() {
             <ArrowUpRight size={17} aria-hidden="true" />
           </a>
         ) : null}
-        <a className="button button-primary" href={`mailto:${siteConfig.email}`}>
-          <Mail size={17} aria-hidden="true" />
+        <a
+          className="button button-primary"
+          href={`mailto:${siteConfig.email}`}
+        >
+          <Mail size={16} aria-hidden="true" />
           Get in touch
         </a>
       </div>

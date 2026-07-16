@@ -10,14 +10,18 @@ import {
 import { siteConfig } from '@/data/site';
 import { cn } from '@/lib/utils';
 
-const icons: Record<(typeof siteConfig.socialLinks)[number]['label'], LucideIcon> =
-  {
-    GitHub: Github,
-    LinkedIn: Linkedin,
-    X: Twitter,
-    CodePen: Codepen,
-    Email: Mail,
-  };
+import { Tooltip } from './tooltip';
+
+const icons: Record<
+  (typeof siteConfig.socialLinks)[number]['label'],
+  LucideIcon
+> = {
+  GitHub: Github,
+  LinkedIn: Linkedin,
+  X: Twitter,
+  CodePen: Codepen,
+  Email: Mail,
+};
 
 export function SocialLinks({ className }: { className?: string }) {
   return (
@@ -26,7 +30,7 @@ export function SocialLinks({ className }: { className?: string }) {
         const Icon = icons[link.label];
         const external = !link.href.startsWith('mailto:');
 
-        return (
+        const anchor = (
           <a
             key={link.label}
             className="social-link"
@@ -38,6 +42,12 @@ export function SocialLinks({ className }: { className?: string }) {
           >
             <Icon size={21} strokeWidth={1.7} aria-hidden="true" />
           </a>
+        );
+
+        return (
+          <Tooltip key={link.label} content={link.label}>
+            {anchor}
+          </Tooltip>
         );
       })}
     </div>

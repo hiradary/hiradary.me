@@ -16,13 +16,13 @@ export default function ProjectsPage() {
     <main id="main-content">
       <Container className="page-shell">
         <header className="page-header">
-          <p className="eyebrow">Selected work</p>
           <h1>Projects</h1>
-          <p>
-            Open-source infrastructure and small products built to make everyday
-            work feel simpler.
-          </p>
+          <p>My projects and work across different technologies and domains.</p>
         </header>
+        <hr className="page-separator" />
+        <h2 className="list-heading">
+          All Projects <span>({projects.length} projects)</span>
+        </h2>
         <div className="project-grid">
           {projects.map((project) => (
             <ProjectCard key={project.slug} project={project} />

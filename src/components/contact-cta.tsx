@@ -1,22 +1,21 @@
-import { ArrowUpRight, Mail } from 'lucide-react';
+import { Plus } from 'lucide-react';
+import Image from 'next/image';
 
 import { siteConfig } from '@/data/site';
 
 export function ContactCta() {
   return (
     <section className="contact-cta" aria-labelledby="contact-heading">
-      <div>
-        <p className="eyebrow">Let&apos;s work together</p>
-        <h2 id="contact-heading">Have something thoughtful to build?</h2>
-        <p>
-          I&apos;m always interested in ambitious products, careful engineering,
-          and good conversations.
-        </p>
-      </div>
-      <a className="button button-primary" href={`mailto:${siteConfig.email}`}>
-        <Mail size={17} aria-hidden="true" />
-        {siteConfig.email}
-        <ArrowUpRight size={16} aria-hidden="true" />
+      <p id="contact-heading">Hey, you scrolled this far, let&apos;s talk.</p>
+      <a className="contact-chip" href={`mailto:${siteConfig.email}`}>
+        <span className="contact-chip-avatar">
+          <Image src={siteConfig.avatar} alt="" width={20} height={20} />
+        </span>
+        <span className="contact-chip-reveal" aria-hidden="true">
+          <Plus size={12} />
+          <span>You</span>
+        </span>
+        <strong>Get in touch</strong>
       </a>
     </section>
   );

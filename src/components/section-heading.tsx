@@ -7,7 +7,7 @@ export function SectionHeading({
 }) {
   return (
     <div className="section-heading">
-      {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
+      {eyebrow ? <p className="section-subheading">{eyebrow}</p> : null}
       <h2>{children}</h2>
     </div>
   );

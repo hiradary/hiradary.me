@@ -1,4 +1,8 @@
-import type { Experience, Technology } from '@/types/content';
+import type {
+  Experience,
+  Technology,
+  TechnologyIconKey,
+} from '@/types/content';
 
 const technologyLinks: Record<string, string> = {
   TypeScript: 'https://www.typescriptlang.org/',
@@ -16,8 +20,28 @@ const technologyLinks: Record<string, string> = {
   GSAP: 'https://gsap.com/',
 };
 
+const technologyIcons: Record<string, TechnologyIconKey> = {
+  TypeScript: 'typescript',
+  JavaScript: 'javascript',
+  React: 'react',
+  'React Native': 'react-native',
+  'Node.js': 'node',
+  PostgreSQL: 'postgresql',
+  MongoDB: 'mongodb',
+  OpenAPI: 'openapi',
+  Storybook: 'storybook',
+  Tailwind: 'tailwind',
+  Stripe: 'stripe',
+  Vitest: 'vitest',
+  GSAP: 'gsap',
+};
+
 const technologies = (...names: string[]): Technology[] =>
-  names.map((name) => ({ name, href: technologyLinks[name] ?? '#' }));
+  names.map((name) => ({
+    name,
+    href: technologyLinks[name] ?? '#',
+    icon: technologyIcons[name] ?? 'developer-tooling',
+  }));
 
 export const experiences: Experience[] = [
   {
@@ -27,7 +51,7 @@ export const experiences: Experience[] = [
     startDate: 'August 2022',
     endDate: 'Present',
     current: true,
-    initials: 'SU',
+    logo: { kind: 'image', src: '/company/sutro.jpg' },
     website: 'https://withsutro.com/',
     technologies: technologies(
       'TypeScript',
@@ -53,7 +77,7 @@ export const experiences: Experience[] = [
     location: 'US · Remote',
     startDate: 'April 2022',
     endDate: 'June 2022',
-    initials: 'GE',
+    logo: { kind: 'initials', text: 'GE' },
     website: 'https://www.linkedin.com/company/genielabs',
     technologies: technologies('TypeScript', 'React', 'JavaScript'),
     description: [
@@ -67,7 +91,7 @@ export const experiences: Experience[] = [
     location: 'Contract',
     startDate: 'February 2022',
     endDate: 'March 2022',
-    initials: 'DK',
+    logo: { kind: 'image', src: '/company/digikala.png' },
     website: 'https://digikala.com/',
     technologies: technologies('TypeScript', 'React', 'JavaScript'),
     description: [
@@ -80,7 +104,7 @@ export const experiences: Experience[] = [
     location: 'Remote',
     startDate: 'December 2020',
     endDate: 'August 2021',
-    initials: 'PQ',
+    logo: { kind: 'image', src: '/company/piqo.png' },
     website: 'https://piqo.design/',
     technologies: technologies('React', 'JavaScript', 'GSAP'),
     description: [
@@ -95,7 +119,7 @@ export const experiences: Experience[] = [
     location: 'Iran',
     startDate: 'January 2018',
     endDate: 'June 2020',
-    initials: 'RT',
+    logo: { kind: 'initials', text: 'RT' },
     website: 'https://ribaltech.ir/',
     technologies: technologies(
       'JavaScript',

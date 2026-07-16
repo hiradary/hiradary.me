@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { ViewTransitions } from 'next-view-transitions';
 import localFont from 'next/font/local';
 
 import { SiteFooter } from '@/components/site-footer';
@@ -62,7 +63,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const hasBlog = hasPublishedPosts();
   const structuredData = {
     '@context': 'https://schema.org',
@@ -83,26 +88,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   };
 
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={hankenGrotesk.variable}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange={false}
-        >
-          <a className="skip-link" href="#main-content">
-            Skip to content
-          </a>
-          <SiteHeader hasBlog={hasBlog} />
-          {children}
-          <SiteFooter hasBlog={hasBlog} />
-        </ThemeProvider>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en" suppressHydrationWarning>
+        <body className={hankenGrotesk.variable}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <a className="skip-link" href="#main-content">
+              Skip to content
+            </a>
+            <SiteHeader hasBlog={hasBlog} />
+            {children}
+            <SiteFooter />
+          </ThemeProvider>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          />
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }

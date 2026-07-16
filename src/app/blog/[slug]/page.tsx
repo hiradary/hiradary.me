@@ -2,16 +2,13 @@ import type { MDXComponents } from 'mdx/types';
 import { ArrowLeft } from 'lucide-react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
 
 import { Container } from '@/components/container';
-import {
-  getPublishedBlogPost,
-  getPublishedBlogPosts,
-} from '@/lib/blog';
+import { getPublishedBlogPost, getPublishedBlogPosts } from '@/lib/blog';
 
 type BlogPostPageProps = { params: Promise<{ slug: string }> };
 
