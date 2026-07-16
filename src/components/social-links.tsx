@@ -10,8 +10,6 @@ import {
 import { siteConfig } from '@/data/site';
 import { cn } from '@/lib/utils';
 
-import { Tooltip } from './tooltip';
-
 const icons: Record<
   (typeof siteConfig.socialLinks)[number]['label'],
   LucideIcon
@@ -30,7 +28,7 @@ export function SocialLinks({ className }: { className?: string }) {
         const Icon = icons[link.label];
         const external = !link.href.startsWith('mailto:');
 
-        const anchor = (
+        return (
           <a
             key={link.label}
             className="social-link"
@@ -40,14 +38,8 @@ export function SocialLinks({ className }: { className?: string }) {
             target={external ? '_blank' : undefined}
             rel={external ? 'noreferrer noopener' : undefined}
           >
-            <Icon size={21} strokeWidth={1.7} aria-hidden="true" />
+            <Icon size={19} strokeWidth={1.6} aria-hidden="true" />
           </a>
-        );
-
-        return (
-          <Tooltip key={link.label} content={link.label}>
-            {anchor}
-          </Tooltip>
         );
       })}
     </div>

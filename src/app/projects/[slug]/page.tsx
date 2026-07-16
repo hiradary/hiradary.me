@@ -42,21 +42,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   if (!project?.caseStudySlug || slug !== 'reoverlay') notFound();
 
   return (
-    <main id="main-content">
+    <main id="main-content" className="page-content">
       <Container className="case-study page-shell">
         <Link className="back-link" href="/projects">
-          <ArrowLeft size={16} aria-hidden="true" /> Back to projects
+          <ArrowLeft size={15} aria-hidden="true" /> Back to Projects
         </Link>
-
-        <div className="case-study-visual">
-          <Image
-            src={project.image}
-            alt={project.imageAlt}
-            width={1600}
-            height={900}
-            priority
-          />
-        </div>
 
         <header className="case-study-header">
           <p className="eyebrow">Open source · React infrastructure</p>
@@ -82,6 +72,16 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
         </header>
 
+        <div className="case-study-visual">
+          <Image
+            src={project.image}
+            alt={project.imageAlt}
+            width={1600}
+            height={900}
+            priority
+          />
+        </div>
+
         <div className="case-study-body">
           <aside className="case-study-facts">
             <div>
@@ -97,7 +97,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               <p>MIT</p>
             </div>
           </aside>
-          <article className="case-study-copy">
+          <article className="case-study-copy prose prose-neutral dark:prose-invert">
             <section>
               <p className="eyebrow">The problem</p>
               <h2>Modal state rarely belongs to one component.</h2>

@@ -6,7 +6,7 @@ import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
 import { ThemeProvider } from '@/components/theme-provider';
 import { siteConfig } from '@/data/site';
-import { hasPublishedPosts } from '@/lib/blog';
+import { getPublishedBlogPosts } from '@/lib/blog';
 
 import './globals.css';
 
@@ -68,7 +68,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const hasBlog = hasPublishedPosts();
+  const posts = getPublishedBlogPosts();
+  const searchEntries = posts.map((post) => ({
+    slug: post.slug,
+    title: post.frontmatter.title,
+    description: post.frontmatter.description,
+    tags: post.frontmatter.tags,
+    content: post.content,
+  }));
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -100,9 +107,10 @@ export default function RootLayout({
             <a className="skip-link" href="#main-content">
               Skip to content
             </a>
-            <SiteHeader hasBlog={hasBlog} />
+            <SiteHeader posts={searchEntries} />
             {children}
-            <SiteFooter />
+            <div className="progressive-blur" aria-hidden="true" />
+            <SiteFooter hasBlog={posts.length > 0} />
           </ThemeProvider>
           <script
             type="application/ld+json"

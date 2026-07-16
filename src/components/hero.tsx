@@ -1,54 +1,61 @@
-import { ArrowUpRight, Mail } from 'lucide-react';
-import Image from 'next/image';
+'use client';
 
-import { heroDescription, siteConfig } from '@/data/site';
+import { Check, Copy } from 'lucide-react';
+import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
+
+import { siteConfig } from '@/data/site';
 
 import { SocialLinks } from './social-links';
-import { TechnologyChip } from './technology-chip';
 
 export function Hero() {
+  const [copied, setCopied] = useState(false);
+  const resetTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(
+    () => () => {
+      if (resetTimer.current) clearTimeout(resetTimer.current);
+    },
+    [],
+  );
+
+  const copyEmail = async () => {
+    await navigator.clipboard.writeText(siteConfig.email);
+    setCopied(true);
+    if (resetTimer.current) clearTimeout(resetTimer.current);
+    resetTimer.current = setTimeout(() => setCopied(false), 1800);
+  };
+
   return (
     <section className="hero" aria-labelledby="hero-heading">
-      <Image
-        className="hero-avatar"
-        src={siteConfig.avatar}
-        alt="Portrait of Hirad Arshadi"
-        width={112}
-        height={112}
-        priority
-      />
-      <div className="hero-copy">
-        <h1 id="hero-heading">
-          Hi, I&apos;m {siteConfig.shortName} <span>— {siteConfig.title}.</span>
-        </h1>
-        <div className="hero-description" aria-label="Professional summary">
-          {heroDescription.map((segment, index) =>
-            segment.type === 'technology' ? (
-              <TechnologyChip
-                key={`${segment.technology.name}-${index}`}
-                technology={segment.technology}
-              />
-            ) : (
-              <span key={`${segment.text}-${index}`}>{segment.text}</span>
-            ),
-          )}
+      <div className="hero-identity">
+        <Image
+          className="hero-avatar"
+          src={siteConfig.avatar}
+          alt="Portrait of Hirad Arshadi"
+          width={96}
+          height={96}
+          priority
+        />
+        <div className="hero-heading-group">
+          <h1 id="hero-heading">{siteConfig.name}</h1>
+          <p className="hero-meta">
+            <span>{siteConfig.title}</span>
+            <span aria-hidden="true">·</span>
+            <span>{siteConfig.location}</span>
+            <span aria-hidden="true">·</span>
+            <button type="button" onClick={copyEmail} aria-live="polite">
+              <span>{copied ? 'Copied' : siteConfig.email}</span>
+              {copied ? (
+                <Check size={13} aria-hidden="true" />
+              ) : (
+                <Copy size={13} aria-hidden="true" />
+              )}
+            </button>
+          </p>
         </div>
       </div>
-      <div className="hero-actions">
-        {siteConfig.resumeUrl ? (
-          <a className="button button-secondary" href={siteConfig.resumeUrl}>
-            Résumé
-            <ArrowUpRight size={17} aria-hidden="true" />
-          </a>
-        ) : null}
-        <a
-          className="button button-primary"
-          href={`mailto:${siteConfig.email}`}
-        >
-          <Mail size={16} aria-hidden="true" />
-          Get in touch
-        </a>
-      </div>
+      <p className="hero-description">{siteConfig.description}</p>
       <SocialLinks className="hero-socials" />
     </section>
   );

@@ -60,18 +60,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   if (!post) notFound();
 
   return (
-    <main id="main-content">
+    <main id="main-content" className="page-content">
       <Container className="article-shell page-shell">
         <Link className="back-link" href="/blog">
-          <ArrowLeft size={16} aria-hidden="true" /> Back to writing
+          <ArrowLeft size={15} aria-hidden="true" /> Back to Blog
         </Link>
         <article>
           <header className="article-header">
+            <h1>{post.frontmatter.title}</h1>
+            <p>{post.frontmatter.description}</p>
             <time dateTime={post.frontmatter.date}>
               {post.frontmatter.date}
             </time>
-            <h1>{post.frontmatter.title}</h1>
-            <p>{post.frontmatter.description}</p>
           </header>
           <div className="prose prose-neutral dark:prose-invert prose-lg max-w-none">
             <MDXRemote

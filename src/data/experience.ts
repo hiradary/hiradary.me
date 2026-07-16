@@ -47,11 +47,12 @@ export const experiences: Experience[] = [
   {
     company: 'Sutro Software',
     role: 'Software Engineer',
-    location: 'US · Remote',
-    startDate: 'August 2022',
-    endDate: 'Present',
+    dateRange: {
+      full: 'August 2022 — Present',
+      compact: 'Aug 22 — Present',
+    },
+    location: { full: 'United States (Remote)', compact: 'US · Remote' },
     current: true,
-    logo: { kind: 'image', src: '/company/sutro.jpg' },
     website: 'https://withsutro.com/',
     technologies: technologies(
       'TypeScript',
@@ -74,10 +75,11 @@ export const experiences: Experience[] = [
   {
     company: 'Genie.xyz',
     role: 'UI Engineer',
-    location: 'US · Remote',
-    startDate: 'April 2022',
-    endDate: 'June 2022',
-    logo: { kind: 'initials', text: 'GE' },
+    dateRange: {
+      full: 'April 2022 — June 2022',
+      compact: 'Apr 22 — Jun 22',
+    },
+    location: { full: 'United States (Remote)', compact: 'US · Remote' },
     website: 'https://www.linkedin.com/company/genielabs',
     technologies: technologies('TypeScript', 'React', 'JavaScript'),
     description: [
@@ -88,10 +90,11 @@ export const experiences: Experience[] = [
   {
     company: 'Digikala',
     role: 'Front-End Developer · Contract',
-    location: 'Contract',
-    startDate: 'February 2022',
-    endDate: 'March 2022',
-    logo: { kind: 'image', src: '/company/digikala.png' },
+    dateRange: {
+      full: 'February 2022 — March 2022',
+      compact: 'Feb 22 — Mar 22',
+    },
+    location: { full: 'Contract', compact: 'Contract' },
     website: 'https://digikala.com/',
     technologies: technologies('TypeScript', 'React', 'JavaScript'),
     description: [
@@ -101,10 +104,11 @@ export const experiences: Experience[] = [
   {
     company: 'Piqo Design',
     role: 'Co-Founder',
-    location: 'Remote',
-    startDate: 'December 2020',
-    endDate: 'August 2021',
-    logo: { kind: 'image', src: '/company/piqo.png' },
+    dateRange: {
+      full: 'December 2020 — August 2021',
+      compact: 'Dec 20 — Aug 21',
+    },
+    location: { full: 'Remote', compact: 'Remote' },
     website: 'https://piqo.design/',
     technologies: technologies('React', 'JavaScript', 'GSAP'),
     description: [
@@ -116,10 +120,11 @@ export const experiences: Experience[] = [
   {
     company: 'RibalTech',
     role: 'Front-End Web/Mobile Developer',
-    location: 'Iran',
-    startDate: 'January 2018',
-    endDate: 'June 2020',
-    logo: { kind: 'initials', text: 'RT' },
+    dateRange: {
+      full: 'January 2018 — June 2020',
+      compact: 'Jan 18 — Jun 20',
+    },
+    location: { full: 'Iran', compact: 'Iran' },
     website: 'https://ribaltech.ir/',
     technologies: technologies(
       'JavaScript',

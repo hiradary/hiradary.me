@@ -30,18 +30,6 @@ export type Technology = {
   icon: TechnologyIconKey;
 };
 
-export type DisplayTechnology = {
-  name: string;
-  icon: TechnologyIconKey;
-};
-
-export type HeroDescriptionSegment =
-  | { type: 'text'; text: string }
-  | { type: 'technology'; technology: Technology };
-
-export type CompanyLogo =
-  { kind: 'image'; src: string } | { kind: 'initials'; text: string };
-
 export type ProjectTechnology = {
   name: string;
   icon: TechnologyIconKey;
@@ -50,11 +38,15 @@ export type ProjectTechnology = {
 export type Experience = {
   company: string;
   role: string;
-  location: string;
-  startDate: string;
-  endDate: string;
+  dateRange: {
+    full: string;
+    compact: string;
+  };
+  location: {
+    full: string;
+    compact: string;
+  };
   current?: boolean;
-  logo: CompanyLogo;
   website?: string;
   description: string[];
   technologies: Technology[];
@@ -91,5 +83,13 @@ export type BlogFrontmatter = {
 export type BlogPost = {
   slug: string;
   frontmatter: BlogFrontmatter;
+  content: string;
+};
+
+export type BlogSearchEntry = {
+  slug: string;
+  title: string;
+  description: string;
+  tags: string[];
   content: string;
 };

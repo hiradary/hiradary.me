@@ -2,39 +2,41 @@ import Image from 'next/image';
 import { Link } from 'next-view-transitions';
 
 import { siteConfig } from '@/data/site';
+import type { BlogSearchEntry } from '@/types/content';
 
+import { BlogSearch } from './blog-search';
 import { Container } from './container';
 import { ThemeToggle } from './theme-toggle';
 
-export function SiteHeader({ hasBlog }: { hasBlog: boolean }) {
-  const navigation = [
-    { label: 'Work', href: '/work-experience' },
-    { label: 'Projects', href: '/projects' },
-    ...(hasBlog ? [{ label: 'Blog', href: '/blog' }] : []),
-  ];
+export function SiteHeader({ posts }: { posts: BlogSearchEntry[] }) {
+  const hasBlog = posts.length > 0;
 
   return (
     <header className="site-header">
       <Container className="header-inner">
-        <div className="header-primary">
-          <Link className="brand-mark" href="/" aria-label="Home">
-            <Image
-              src={siteConfig.avatar}
-              alt=""
-              width={48}
-              height={48}
-              priority
-            />
+        <Link className="brand-mark" href="/" aria-label="Home">
+          <Image
+            src={siteConfig.avatar}
+            alt=""
+            width={32}
+            height={32}
+            priority
+          />
+        </Link>
+        <nav className="primary-nav" aria-label="Primary navigation">
+          <Link className="home-nav-link" href="/">
+            Home
           </Link>
-          <nav className="primary-nav" aria-label="Primary navigation">
-            {navigation.map((item) => (
-              <Link key={item.href} href={item.href}>
-                {item.label}
-              </Link>
-            ))}
-          </nav>
+          <Link href="/work-experience">Work</Link>
+          {hasBlog ? <Link href="/blog">Blog</Link> : null}
+          {siteConfig.resumeUrl ? (
+            <a href={siteConfig.resumeUrl}>Resume</a>
+          ) : null}
+        </nav>
+        <div className="header-actions">
+          {hasBlog ? <BlogSearch entries={posts} /> : null}
+          <ThemeToggle />
         </div>
-        <ThemeToggle />
       </Container>
     </header>
   );

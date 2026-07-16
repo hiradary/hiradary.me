@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 
 import { Container } from '@/components/container';
 import { ExperienceCard } from '@/components/experience-card';
+import { Reveal } from '@/components/reveal';
 import { experiences } from '@/data/experience';
 
 export const metadata: Metadata = {
@@ -13,29 +14,28 @@ export const metadata: Metadata = {
 
 export default function WorkExperiencePage() {
   return (
-    <main id="main-content">
+    <main id="main-content" className="page-content">
       <Container className="page-shell">
         <header className="page-header">
           <h1>Work Experience</h1>
           <p>My work experiences across different companies and roles.</p>
         </header>
-        <hr className="page-separator" />
-        <h2 className="list-heading">
-          All Experiences <span>({experiences.length} experiences)</span>
-        </h2>
         <div className="experience-list experience-list-full">
-          {experiences.map((experience) => (
-            <ExperienceCard key={experience.company} experience={experience} />
+          {experiences.map((experience, index) => (
+            <Reveal key={experience.company} delay={Math.min(index, 4) * 50}>
+              <ExperienceCard experience={experience} />
+            </Reveal>
           ))}
         </div>
-        <section className="education" aria-labelledby="education-heading">
-          <p className="eyebrow">Education</p>
-          <h2 id="education-heading">Douglas College</h2>
-          <div className="education-meta">
-            <p>Diploma, Computing Studies and Information Systems</p>
-            <p>May 2022 — April 2024 · New Westminster, BC</p>
-          </div>
-        </section>
+        <Reveal>
+          <section className="education" aria-labelledby="education-heading">
+            <h2 id="education-heading">Douglas College</h2>
+            <div className="education-meta">
+              <p>Diploma, Computing Studies and Information Systems</p>
+              <p>May 2022 — April 2024 · New Westminster, BC</p>
+            </div>
+          </section>
+        </Reveal>
       </Container>
     </main>
   );
