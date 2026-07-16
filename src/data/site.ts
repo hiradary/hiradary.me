@@ -1,7 +1,7 @@
 import type { SocialLink } from '@/types/content';
 
 export const siteConfig = {
-  name: 'Hirad Arshadi Yarahmadi',
+  name: 'Hirad Arshadi',
   shortName: 'Hirad',
   title: 'Full-Stack Software Engineer',
   description:

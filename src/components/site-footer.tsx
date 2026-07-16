@@ -26,7 +26,7 @@ export function SiteFooter({ hasBlog }: { hasBlog: boolean }) {
           <SocialLinks />
         </div>
         <p className="footer-copyright">
-          © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+          © {new Date().getFullYear()} {siteConfig.name}
         </p>
       </Container>
     </footer>

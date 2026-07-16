@@ -1,4 +1,4 @@
-# Hirad Arshadi Yarahmadi
+# Hirad Arshadi
 
 **Full-Stack Software Engineer**
 
@@ -62,7 +62,7 @@ Genie was an NFT marketplace aggregation product later acquired by Uniswap.
 
 ## Education
 
-### [Douglas College](https://www.douglascollege.ca/program/dpcsti)
+### [Douglas College](https://www.douglascollege.ca/)
 
 Diploma, Computing Studies and Information Systems | 05/2022 - 04/2024 | New Westminster, BC
 
